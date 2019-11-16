@@ -14,7 +14,7 @@ class Products extends CI_Controller{
 	public function index(){
 		$data["title"] = "Food Menu";
 		//call get_products method with empty parameter.
-		$data["products"] = $this->products_model->get_products();
+		$data["products"] = $this->products_model->getProducts();
 		
 		$this->load->view('pages/foods', $data);
 	}
