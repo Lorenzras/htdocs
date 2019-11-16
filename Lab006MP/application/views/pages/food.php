@@ -1,7 +1,3 @@
-<!--
-Name: Ras, Lorenz	Course: BSIT	Lab No. 3
-
--->
 
 <!doctype html>
 <html>

@@ -31,7 +31,7 @@ Name: Ras, Lorenz	Course: BSIT	Lab No. 3
 				<td><?php echo $p['name']; ?></td>
 				<td><?php echo $p['description']; ?></td>
 				<td><?php echo $p['price']; ?></td>
-				<td><a href="<?php echo base_url('products/view/'.$p['name']);  ?>">View</a></td>
+				<td><a href="<?php echo base_url('products/view/'.$p['product_id']);  ?>">View</a></td>
 				<td><a href="<?php echo base_url('products/edit/'.$p['product_id']);  ?>">Edit</a></td>
 				<td><a href="<?php echo base_url('products/delete/'.$p['product_id']);  ?>" onClick="return confirm('Are you sure?');">Delete</a></td>
 			</tr>

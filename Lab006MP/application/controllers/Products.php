@@ -20,9 +20,9 @@ class Products extends CI_Controller{
 	}
 	
 	
-	public function view($foodName = NULL){
+	public function view($id = NULL){
 
-		$data["product"] = $this->products_model->get_products($foodName);
+		$data["product"] = $this->products_model->getProducts($id);
 		
 		if(empty($data["product"])){
 			show_404();
