@@ -37,11 +37,11 @@ class Account_login extends CI_Controller{
 				
 				$_SESSION['error_count'][$username] += 1;
 			}else{
-				echo $username;
+				//echo $username;
 				$_SESSION['error_count'][$username] = 1;
 			}
 			
-			echo $_SESSION['error_count'][$username].'  ';
+			//echo $_SESSION['error_count'][$username].'  ';
 			
 			$isBlocked = $this->accounts_login_model->isBlocked($username);
 			if($isBlocked){

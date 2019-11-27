@@ -63,21 +63,18 @@ class accounts_login_model extends CI_Model{
 		$this->email->set_newline("\r\n");	//エラー回避のおまじない
 
 		$this->email->from("lenzras@gmail.com", "Lorenz Ras");
-		$this->email->to("lenzras@yahoo.co.jp");
+		$this->email->to($email);
 		$this->email->subject("Account Blocked");
 		
 		$message = $this->load->view('account_blocked',null,TRUE);
 		
 		$this->email->message($message);
-		if($this->email->send()){
-			echo 'Your Email has successfully been sent.';
-        } else {
+		if(!$this->email->send()){
             show_error($this->email->print_debugger());
-        
 		}
 		
 		$this->db->where('acc_username',$username);
-		return $this->db->update('accounts',array('acc_isBlocked' => 0));
+		return $this->db->update('accounts',array('acc_isBlocked' => 1));
 	}
 	
 	public function account_lookup($username, $return){
