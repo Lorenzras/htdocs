@@ -14,7 +14,7 @@
 			echo $bday;
 		
 		echo "<h4>ADDRESS</h4><hr>";	
-			echo  "{$house_no}, {$street}, {$area}, {$city_province}";
+			echo  "{$house_no}, {$street}, {$area}, {$city_province}, {$postal_code}";
 		
 		echo "<h4>CONTACT DETAILS</h4><hr>";
 			echo 	"Phone: {$phone}<br>

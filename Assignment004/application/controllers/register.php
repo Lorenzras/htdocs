@@ -57,11 +57,22 @@ class register extends CI_Controller {
 	}
 	
 	public function action(){
+		
 		if(set_value('action')=='REGISTER'){
-			echo $this->session->flashdata('data')['genderOption'].' success';
+			$this->load->model('register_model');
+			$isRegistered = $this->register_model->register();
+			
+			if($isRegistered){
+				$data['title'] = 'Registration Successful!';
+				$data['message'] = 'Please check your email to activate your account.';
+			}else{
+				$data['title'] = 'Registration Failed!';
+				$data['message'] = 'Something went wrong. Please try again later.';
+			}
+			$this->load->view('index_register_done', $data);
 		}else{
 			$data["title"] = 'LTRAS Registration Form';
-//			echo $_SESSION['data']['fname'];
+
 			$this->index();
 		}
 	}

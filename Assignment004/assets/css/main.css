@@ -94,6 +94,9 @@ hr{
 	padding: 0px;
 }
 
+#messagebox {
+	text-align: center;	
+}
 
 .frame {
 	width: 50%;
