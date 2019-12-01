@@ -55,8 +55,8 @@ class accounts_login_model extends CI_Model{
 			"smtp_host" => "ssl://smtp.googlemail.com",
 			"smtp_port"=>465,
 			"mailtype" => "html",
-			"smtp_user"=>"lenzras@gmail.com",
-			"smtp_pass"=>"watashiwarenzudesu"
+			"smtp_user"=>"amaoedlenzras@gmail.com",
+			"smtp_pass"=>"A3weakne"
 		);
 		
 		$this->load->library("email", $config);
