@@ -57,6 +57,7 @@ class accounts_login_model extends CI_Model{
 			"mailtype" => "html",
 			"smtp_user"=>"amaoedlenzras@gmail.com",
 			"smtp_pass"=>"A3weakne"		
+			
 		);
 		
 		$this->load->library("email", $config);
