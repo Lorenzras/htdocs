@@ -10,12 +10,18 @@ input[type=text], input[type=password], input[type=date],textarea, select{
   border-radius: 10px;
   box-sizing: border-box;
 }
-
+label {
+	font-size: 0.8em;
+	color: dimgray;
+}
 fieldset {
-	width: 70%;
+	width: 20%;
+	min-width: 300px;
+	margin-top: 5%;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 10px;
+	padding: 15px;
+	border-radius: 20px;
   	border: 1px solid #ccc;
 	box-sizing: border-box;
 }
@@ -35,7 +41,7 @@ input[type=submit],#back {
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -94,19 +100,27 @@ hr{
 	padding: 0px;
 }
 
-#messagebox {
-	text-align: center;	
-}
-
 .frame {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+#errors:empty {
+    display: none;
+}
+
+#messagebox {
+	text-align: center;	
+}
+
+
+
 #footer {
 	margin: auto;
 	text-align: center;
+	font-size: 1em;
+	color: darkgray;
 	padding: 12px;
 	background-color: white;
 }
@@ -121,7 +135,7 @@ hr{
 	margin:10px 22px;
 	line-height: 1em;
 	color: #D8000C;
-    
+    background-color: lightcoral;
     font-size:0.8em;
     vertical-align:middle;
 }
