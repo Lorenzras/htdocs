@@ -2,6 +2,7 @@
 class login extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
+		$this->load->model('accounts_login_model');
 	}
 	
 	public function index(){
@@ -15,13 +16,23 @@ class login extends CI_Controller {
 		$this->form_validation->set_rules('txtPassword','Password',"required|trim|min_length[4]|check_user");
 		
 		if($this->form_validation->run() === TRUE){
-			
-			echo 'Success';
+			$data['name'] = $this->accounts_login_model->account_lookup(set_value('txtUsername'),'acc_name');
+			$this->load->view('index_login_success',$data);
 		}else{
 			
 			$this->index();
 		}
 		
+	}
+	
+	public function unblock(){
+		
+		
+		$username = $this->uri->segment(3);
+		$code = $this->uri->segment(4);
+		$this->accounts_login_model->unblock($username, $code);
+		
+		$this->index();
 	}
 	/*
 	public function check_user(){

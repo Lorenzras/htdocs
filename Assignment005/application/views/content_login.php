@@ -1,8 +1,11 @@
 <?php
 echo form_fieldset('LOGIN');
+	if(validation_errors()){
+		echo '<div id="errors">'.validation_errors().'</div>';
+	}else if($this->session->flashdata('message')){
+		echo '<div id="message">'.$this->session->flashdata('message').'</div>';
+	}
 	
-	echo '<div id="errors">'.validation_errors().'</div>';
-
 	echo form_open('login/verify');
 		echo form_label('Username','txtUsername');  
 		echo form_input('txtUsername',set_value('txtUsername'),"placeholder='Enter Username'");
