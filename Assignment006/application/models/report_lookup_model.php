@@ -10,6 +10,15 @@ class report_lookup_model extends CI_Model{
 		$row = $rs->row();
 		return $row->$return;
 	}
+	
+	public function r_count($table, $field = NULL, $key = NULL){
+		
+		$this->db->from($table);
+		if( $key !== NULL ) {
+			$this->db->where($field, $key);
+		}
+		return $this->db->count_all_results();
+	}
 }
 
 ?>

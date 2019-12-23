@@ -2,11 +2,13 @@
 class query extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
+		$this->load->model('reports_model');
 	}
 	
 	public function index(){
 		$data['title'] = 'Queries';
 		$this->load->view('queries',$data);
+		
 	}
 	
 	public function enrolled_students(){
@@ -20,7 +22,7 @@ class query extends CI_Controller{
 			
 			$datestart = $this->input->post('txtdatestart');
 			$dateend = $this->input->post('txtdateend');
-			$this->load->model('reports_model');
+			
 			$data['students'] = $this->reports_model->query_enrolledStudents_dataBetween($datestart,$dateend);
 			$this->load->view('query_enrolled_students', $data);
 			
@@ -32,7 +34,13 @@ class query extends CI_Controller{
 	}
 	
 	public function enrollment_summary(){
-		$this->load->view('query_enrolled_summary');
+		$data['title'] = 'Enrollment Summary';
+		$data['count_enrolledStudents'] = $this->report_lookup_model->r_count('enrollment_profile','isEnrolled',1);
+		$data['count_notEnrolledStudents'] = $this->report_lookup_model->r_count('enrollment_profile','isEnrolled',0);
+		$data['count_totalStudents'] = $this->report_lookup_model->r_count('enrollment_profile');
+		
+		$data['courses'] = $this->reports_model->list_courses();
+		$this->load->view('query_enrolled_summary',$data);
 	}
 }
 
