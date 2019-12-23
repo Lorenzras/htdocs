@@ -11,7 +11,7 @@
 	<tr>
 		<td><?php echo $stud_id; ?></td>
 		<td><?php echo $this->report_lookup_model->r_value('students','stud_id',$stud_id,'stud_lname'); ?></td>
-		<td><?php echo $this->report_lookup_model->r_value('students','stud_id',$stud_id,'stud_lname'); ?></td>
+		<td><?php echo $this->report_lookup_model->r_value('students','stud_id',$stud_id,'stud_fname'); ?></td>
 		<td><?php echo date('F d, Y',strtotime($enr_dateEnrolled)); ?></td>
 	</tr>
 <?php endforeach; ?>
