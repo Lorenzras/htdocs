@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Slick</title>
 	<link rel="stylesheet" type="text/css" href="<?= asset_url().'slick/slick.css'; ?>">;
 	<link rel="stylesheet" type="text/css" href="<?= asset_url().'slick/slick-theme.css'; ?>">;
 </head>
