@@ -1,0 +1,12 @@
+/* CSS Document */
+#front-end-carousel{
+	min-height: 500px;
+}
+
+body{
+	zoom:0.85;
+}
+
+.parallax img{
+	width: 1080px;
+}
