@@ -1,0 +1,145 @@
+/* CSS Document */
+header, main, footer {
+  padding-left: 180px;
+}
+
+footer {
+	font-size: 14px;
+    background: #242423;
+    padding: 2em 0;
+}
+
+
+#slide-out{
+	
+	width: 200px;
+}
+
+
+
+@media only screen and (max-width : 992px) {
+  header, main, footer, .col {
+	padding-left: 0 !important;
+  }
+	
+	.mainheading {
+	
+	font-size: 24px !important;
+
+	}
+	
+	.desc .content {
+	font-size: 24px !important;
+	}
+}
+
+
+/* Text */
+ul li a {
+    margin: 0 0 15px 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20px !important;
+    font-weight: 700;
+}
+
+.desc {
+	padding-top: 20px;
+	display: block;
+}
+
+.desc .content {
+	font-size: 30px;
+	font-weight: 500;
+	display: block;
+	color: #999999;
+}
+
+.mainheading {
+	padding-top: 0px;
+	font-size: 40px;
+	font-weight: 900;
+	margin: 0rem;
+}
+
+.mainheading .demphasize{
+	color: gray;
+}
+
+.mainheading .emphasize{
+	color: #ccb78f;
+}
+
+.subheading {
+    font-size: 24px;
+    color: #bfbfbf;
+    font-weight: 400;
+}
+
+.footerheading {
+	margin: 0;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	font-size: 50px;
+	font-weight: 900;
+}
+
+#footerheading-wrapper{
+	padding: 0;
+	margin: 0;
+}
+
+/* Photos and Icons */
+
+.card-image {
+	height: 200px;
+	position: absolute;
+	bottom: 0;
+}
+.social-icon {
+	filter: grayscale(100%);
+	margin: 0 auto;
+	 transition: transform .2s; 
+ 	width: 50px;
+  opacity: 0.6;
+}
+
+.social-icon:hover {
+	filter: grayscale(0%);
+	 transform: scale(1.2); 
+	opacity: 1;
+
+}
+
+.social-link {
+	display: block;
+}
+
+/* testing area */
+
+#profile{
+	width: 100px;
+}
+
+body {
+	height: 100%;
+}
+
+.menu {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	z-index: 99;
+	background: gray;
+	opacity: 0.7;
+	border-radius: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+.carousel-item {
+	
+  background-size: cover;
+  background-position: center bottom;
+  height: 600px !important;
+}

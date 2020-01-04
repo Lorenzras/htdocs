@@ -3,9 +3,18 @@
 	min-height: 500px;
 }
 
+#front-end-footer{
+	margin-top: 200px;
+}
+
 body{
 	zoom:0.85;
 }
+
+.testimonials {
+	margin-top: 100px;
+}
+
 
 .parallax img{
 	width: 1080px;
